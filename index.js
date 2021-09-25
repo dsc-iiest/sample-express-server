@@ -31,10 +31,21 @@ app.post('/todo/new', (req, res) => {
     res.status(201).json(body);
 });
 
+// GET id: Receive the specific todo
 app.get('/todo/:id', (req, res) => {
     const { id } = req.params;
     const todo = todos.find((val) => val.id === id);
     res.status(200).json(todo);
+});
+
+// PUT: to update a specific todo
+app.put('/todo/update', (req, res) => {
+    // Write the code to update the todo whose id is present in teh body
+});
+
+// DELETE: to delete a specific todo
+app.delete('/todo/:id', (req, res) => {
+    // Write the code to delete the specific todo
 });
 
 const callback = () => {
