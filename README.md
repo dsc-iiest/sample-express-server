@@ -40,3 +40,17 @@ API is a software intermediary that allows two applications to talk to each othe
 - High performance due to caching support
 - Highly scalable as stateless
 - Not bound to any specific programming language
+
+# Commands
+
+Initialize the npm
+
+```
+npn init -y
+```
+
+Install the packages
+
+```
+npm i express nodemon
+```
