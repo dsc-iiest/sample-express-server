@@ -25,10 +25,16 @@ app.get('/todos', (req, res) => {
 });
 
 // POST: Create a todo
-app.post('/todos/new', (req, res) => {
+app.post('/todo/new', (req, res) => {
     const { body } = req;
     todos.push(body);
     res.status(201).json(body);
+});
+
+app.get('/todo/:id', (req, res) => {
+    const { id } = req.params;
+    const todo = todos.find((val) => val.id === id);
+    res.status(200).json(todo);
 });
 
 const callback = () => {
