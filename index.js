@@ -9,6 +9,19 @@ app.get('/', (req, res) => {
     });
 });
 
+const todos = [];
+
+// Todo Object Structure
+// {
+//   id: string,
+//   task: string
+// }
+
+// GET: Receive all the todos
+app.get('/todos', (req, res) => {
+    res.status(200).json(todos);
+});
+
 const callback = () => {
     console.log(`Server started on http://localhost:${PORT}`);
 };
