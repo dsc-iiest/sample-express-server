@@ -54,3 +54,15 @@ Install the packages
 ```
 npm i express nodemon
 ```
+
+Make the changes in the `package.json`
+```
+"start": "node index.js",
+"dev": "nodemon index.js",
+```
+
+To run the server in dev mode (using nodemon)
+
+```bash
+npm run dev
+```
