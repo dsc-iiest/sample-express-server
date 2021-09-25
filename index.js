@@ -4,7 +4,9 @@ const app = express();
 const PORT = 5000;
 
 app.get('/', (req, res) => {
-    res.send('Hello from GDSC-IIEST');
+    res.json({
+        message: 'Hello from DSC-IIEST',
+    });
 });
 
 const callback = () => {
